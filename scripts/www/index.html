@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="丢丢工作台">
+<title>丢丢工作台 · Life OS</title>
+
+<link rel="stylesheet" href="styles.css?v=20260801v">
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="stage">
+  <div class="iphone">
+    <div class="dynamic-island"></div>
+
+    <div class="app">
+      <!-- 状态栏 -->
+      <div class="status-bar">
+        <span class="time" id="statusTime">9:41</span>
+        <span class="icons">●●● 5G ▮</span>
+      </div>
+
+      <!-- 主区域：左侧栏 + 右侧内容 -->
+      <div class="app-body">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <div class="sidebar-avatar" id="topbarAvatar">丢</div>
+            <div class="sidebar-name">丢丢</div>
+          </div>
+          <div class="sidebar-list" id="navList">
+            <!-- JS 渲染 -->
+          </div>
+          <div class="sidebar-add" id="navAdd">
+            <div class="sidebar-add-icon">＋</div>
+            <div class="sidebar-add-label">添加新项目</div>
+          </div>
+        </div>
+
+        <!-- 右侧内容区 -->
+        <div class="content-wrap">
+          <div class="topbar">
+            <button class="topbar-toggle" id="topbarToggle" title="收起/展开侧边栏">☰</button>
+            <div class="topbar-title" id="topbarTitle">工作台</div>
+          </div>
+          <div class="content" id="mainArea" data-theme="coral">
+            <!-- JS 渲染 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 纸纹背景 -->
+    <div class="paper-bg"></div>
+
+    <!-- 模态 -->
+    <div class="modal-mask" id="modalMask">
+      <div class="modal" id="modalContent"></div>
+    </div>
+
+    <!-- 头像上传 -->
+    <input type="file" id="avatarInput" hidden accept="image/*">
+  </div>
+</div>
+
+<script src="app.js?v=20260801v"></script>
+</body>
+</html>
